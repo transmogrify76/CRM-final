@@ -1,0 +1,96 @@
+.container_1 {
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-image: url(../../assets/viewForm.jpeg);
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; 
+}
+
+
+.card {
+  position: relative;
+  top:0.5%;
+  left: 30%;
+  width: 600px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Hide overflow to contain box-shadow */
+}
+
+.card-header {
+  background-color: #6c5ce7; /* Header background color */
+  color: #fff;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.para {
+  margin-bottom: 10px;
+}
+
+.form-control-static {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* Alternate background color for rows */
+.card-body > div:nth-child(odd) {
+  background-color: #f9f9f9;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+/* Styling for labels */
+label {
+  color: #677373;
+  font-size: larger;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Styling for hover effect */
+.card-body > div:hover {
+  background-color: #e6e6e6;
+  transition: background-color 0.3s ease;
+}
+.downloadbtn{
+  position: relative;
+  left: 70%;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.downloadbtn:hover {
+  background-color: #45a049;
+}
+
+.downloadbtn:active {
+  background-color: #3e8e41;
+}

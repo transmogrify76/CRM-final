@@ -1,0 +1,23 @@
+<div class="container1">
+    <div class="sign-upform">
+        <h1>Create New Account</h1>
+        <form (ngSubmit)="registerData()" [formGroup]="registrationForm">
+            <div class="form-group">
+                <input type="text" placeholder="Full Name" id="name" formControlName="first_name" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Username" id="name" formControlName="username" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" id="email" formControlName="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" id="password" formControlName="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+        </form>
+        <div class="signup">
+            <span class="dhan">Already have an Account? </span><a href="/login">Login</a>
+        </div>
+    </div>
+</div>

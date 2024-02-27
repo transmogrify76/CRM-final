@@ -1,0 +1,109 @@
+$font-roboto: 'Roboto', sans-serif;
+
+.c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-image: url("../../assets/user_form.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Arial', sans-serif; 
+}
+
+.container {
+  position: relative;
+  right: -20%;
+  top: 1%;
+  width: 550px;
+  height: auto; /* Changed to auto for dynamic height */
+  max-height: 90vh; /* Added max-height to avoid overflow */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.card {
+  margin-top: 1px;
+}
+
+.card-header {
+  background-color: #151828;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: $font-roboto; 
+  font-size: 2rem;
+}
+
+.label {
+  font-weight: bold;
+  color: #343a40;
+}
+
+input, select { /* Applied changes to input and select elements */
+  width: calc(100% - 20px); /* Adjusted width to account for padding */
+  padding: 10px;
+  border: 1px solid #6c757d;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+  color: #343a40;
+  margin-bottom: 10px; /* Added margin for spacing between elements */
+}
+
+input:focus, select:focus { /* Applied changes to focus state */
+  outline: none;
+  border-color: #007bff;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  margin-top: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #343a40;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px; /* Added margin for spacing */
+}
+
+button:hover {
+  background-color: #23272b;
+}
+
+.spinner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #6c5ce7;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

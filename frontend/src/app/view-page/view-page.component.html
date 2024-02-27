@@ -1,0 +1,34 @@
+<div class="container_1">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title">Customer Information</h5>
+    </div>
+    <div class="card-body">
+        <label for="name">Name</label>
+        <p class="form-control-static" data-label="Name">{{ customer?.name }}</p>
+
+        <label for="email">Email</label>
+        <p class="form-control-static" data-label="Email">{{ customer?.email }}</p>
+
+        <label for="address">Address</label>
+        <p class="form-control-static" data-label="Address">{{ customer?.address }}</p>
+
+        <label for="visitingDate">Visiting Date</label>
+        <p class="form-control-static" data-label="Visiting Date">{{ customer?.visiting_date }}</p>
+
+        <label for="customerResponse">Customer Response</label>
+        <p class="form-control-static" data-label="Customer Response">{{ customer?.outcome }}</p>
+
+        <label for="prospectStatus">Prospect Status</label>
+        <p class="form-control-static" data-label="Prospect Status">{{ customer?.prospect_status }}</p>
+
+        <label for="employee">Employee Name</label>
+        <p class="form-control-static" data-label="Employee Name">{{ customer?.employee }}</p>
+
+        <!-- Add download button -->
+        <button id="downloadPdfBtn" class="downloadbtn" (click)="downloadPDF()">Download PDF</button>
+
+    </div>
+  </div>
+</div>
+

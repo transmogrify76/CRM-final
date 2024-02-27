@@ -1,0 +1,88 @@
+<div class="c">
+  <div class="container">
+    <div class="row">
+      <div class="card custom-card">
+        <div class="card-header">
+          <h3 class="text-center">User Details</h3>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="register" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="name">Customer Name</label>
+              <input formControlName="name"
+                [ngClass]="{'is-invalid': submitted && register.controls['name'].errors}" type="text"
+                class="form-control">
+              <div *ngIf="submitted && register.controls['name'].errors" class="invalid-feedback">
+                This field is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address">Customer Address</label>
+              <input formControlName="address"
+                [ngClass]="{'is-invalid': submitted && register.controls['address'].errors}" type="text"
+                class="form-control">
+              <div *ngIf="submitted && register.controls['address'].errors" class="invalid-feedback">
+                This field is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Customer Email</label>
+              <input formControlName="email"
+                [ngClass]="{'is-invalid': submitted && register.controls['email'].errors}" type="email"
+                class="form-control">
+              <div *ngIf="submitted && register.controls['email'].errors" class="invalid-feedback">
+                This field is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="employee">Employee Name</label>
+              <input formControlName="employee"
+                [ngClass]="{'is-invalid': submitted && register.controls['employee'].errors}" type="text"
+                class="form-control" readonly>
+              <div *ngIf="submitted && register.controls['employee'].errors" class="invalid-feedback">
+                This field is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="outcome">Customer outcome</label>
+              <input formControlName="outcome"
+                [ngClass]="{'is-invalid': submitted && register.controls['outcome'].errors}" type="text"
+                class="form-control">
+              <div *ngIf="submitted && register.controls['outcome'].errors" class="invalid-feedback">
+                This field is required.
+              </div>
+            </div><br>
+            <div class="form-group">
+              <label for="prospect_status">Prospect Status</label>
+              <select formControlName="prospect_status" class="form-control">
+                  <option value="Positive">Positive</option>
+                  <option value="Negative">Negative</option>
+              </select>
+              <div *ngIf="submitted && register.controls['prospect_status'].errors" class="invalid-feedback">
+                  This field is required.
+              </div>
+          </div><br>
+            <div class="form-group">
+              <label for="visiting_date">Visiting Date</label>
+              <input formControlName="visiting_date"
+                [ngClass]="{'is-invalid': submitted && register.controls['visiting_date'].errors}" type="date"
+                class="form-control">
+              <div *ngIf="submitted && register.controls['visiting_date'].errors" class="invalid-feedback">
+                This field is required.
+              </div>
+            </div>
+            <div class="form-group text-center">
+              <br>
+              <button class="btn btn-success">
+                Register
+              </button>
+              <div *ngIf="submitted" class="spinner-overlay">
+                <div class="spinner"></div>
+              </div>                     
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
